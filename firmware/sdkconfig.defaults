@@ -1,0 +1,2 @@
+# Target is selected with: idf.py set-target esp32s3
+# Keep this file for shared non-target defaults applied on first configure.

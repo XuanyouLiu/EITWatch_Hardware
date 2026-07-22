@@ -19,7 +19,7 @@ hw/
 ├── bom/                      # bill of materials
 ├── docs/                     # overview figure, schematic PDF, STEP model
 ├── fabrication/gerber/       # Gerber + NC drill for PCB fab
-└── firmware/                 # ESP-IDF firmware (XIAO ESP32-C3)
+└── firmware/                 # ESP-IDF firmware (XIAO ESP32-S3)
 ```
 
 | Path | Contents |
@@ -42,7 +42,7 @@ hw/
 | Excitation | AD5930 sinusoid at 50 kHz; ADA4841 V-to-I; ~1 mA peak-to-peak (AD5270-set) |
 | Sensing | AD8220 instrumentation amp + AD5270 gain; AD7450 12-bit ADC |
 | Switching | 4 × ADG738 8-channel matrix switches |
-| Host MCU | Seeed XIAO ESP32-C3 on headers `P2` / `P3` (firmware in this repo targets `esp32c3`) |
+| Host MCU | Seeed XIAO ESP32-S3 on headers `P2` / `P3` (firmware in this repo targets `esp32s3`) |
 | Frame rate | ~48 Hz for the 35-channel multi-depth schedule |
 | Stackup (Gerber export) | 6 copper layers: `GTL`, `G1`–`G4`, `GBL` |
 
@@ -90,7 +90,7 @@ Full line items are in [`bom/BOM.csv`](bom/BOM.csv). The BOM does **not** includ
 
 - Populate the mixed-signal AFE on the top side; electrodes face the skin on the bottom.
 - Mount the eight Ø2 mm gold-plated stainless disks flush so the watch-back contact plane is even.
-- Seat a **Seeed XIAO ESP32-C3** on headers `P2`/`P3` with the orientation matching the silkscreen and [`firmware/docs/esp32-pin-map.png`](firmware/docs/esp32-pin-map.png).
+- Seat a **Seeed XIAO ESP32-S3** on headers `P2`/`P3` with the orientation matching the silkscreen.
 - Power and bring-up: use the firmware hardware-test path before full scanning (see [`firmware/README.md`](firmware/README.md)).
 
 ### Editing the design
@@ -112,14 +112,12 @@ Firmware lives in [`firmware/`](firmware/) (ESP-IDF v5.2+). It drives the AD5930
 ```bash
 cd firmware
 . $HOME/esp/esp-idf/export.sh   # adjust to your IDF install
-idf.py set-target esp32c3
+idf.py set-target esp32s3
 idf.py build
 idf.py -p /dev/tty.usbmodemXXXX flash monitor
 ```
 
-See [`firmware/README.md`](firmware/README.md) for structure, flash steps, and bring-up notes.
-
-**Note:** The accompanying paper text refers to a Seeed XIAO ESP32-S3 for the reported study path. The firmware checked into this folder is configured and pin-mapped for **XIAO ESP32-C3** (`CONFIG_IDF_TARGET=esp32c3`). If you port to S3, update `sdkconfig`, pin macros in `firmware/drivers/board_pins.h`, and re-validate SPI / CS wiring.
+See [`firmware/README.md`](firmware/README.md) for structure, flash steps, and bring-up notes. Pin macros in `firmware/drivers/board_pins.h` use XIAO ESP32-S3 GPIO numbers for pads `D0`–`D10`.
 
 ## Safety and intended use
 

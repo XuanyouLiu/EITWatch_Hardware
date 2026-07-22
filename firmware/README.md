@@ -1,6 +1,6 @@
 # EITWatch firmware
 
-ESP-IDF firmware for the EITWatch analog front end. Targets a **Seeed XIAO ESP32-C3** on headers `P2`/`P3` and drives:
+ESP-IDF firmware for the EITWatch analog front end. Targets a **Seeed XIAO ESP32-S3** on headers `P2`/`P3` and drives:
 
 | Part | Role |
 |------|------|
@@ -18,12 +18,11 @@ firmware/
 ├── main/            # app entry, calibration, measurement task
 ├── middleware/      # HAL, mux/SPI orchestration, hardware tests
 ├── drivers/         # AD5930, AD5270, ADG738, AD7450 drivers
-├── docs/            # XIAO pin-map image
 ├── CMakeLists.txt
-└── sdkconfig        # checked-in defaults for esp32c3
+└── sdkconfig.defaults
 ```
 
-Pin macros live in [`drivers/board_pins.h`](drivers/board_pins.h). A wiring diagram is in [`docs/esp32-pin-map.png`](docs/esp32-pin-map.png).
+Pin macros live in [`drivers/board_pins.h`](drivers/board_pins.h) (XIAO ESP32-S3 GPIO numbers for pads `D0`–`D10`).
 
 ## Requirements
 
@@ -38,9 +37,9 @@ On first build, the IDF component manager fetches `espressif/esp-dsp` into `mana
 # 1) Load ESP-IDF (path may differ on your machine)
 . $HOME/esp/esp-idf/export.sh
 
-# 2) Build for the XIAO ESP32-C3
+# 2) Build for the XIAO ESP32-S3
 cd firmware
-idf.py set-target esp32c3
+idf.py set-target esp32s3
 idf.py build
 
 # 3) Flash and open the serial monitor
@@ -55,18 +54,10 @@ After flash, `app_main` initializes SPI, ADC, muxes, digipots, and the 50 kHz so
 
 ### Quick bring-up checklist
 
-1. Seat the XIAO with the USB port oriented as on the silkscreen / pin-map image.
+1. Seat the XIAO with the USB port oriented as on the silkscreen.
 2. Power the board and confirm the port appears.
 3. Flash with the commands above.
 4. For first-article boards, temporarily call `test_function()` from `app_main` (see `middleware/hardware-test.c`) to exercise ADC, signal generator, and mux paths before running the full schedule.
-
-## Porting notes
-
-This tree is configured for **`esp32c3`**. The paper study text mentions a XIAO ESP32-S3; if you port:
-
-1. `idf.py set-target esp32s3`
-2. Update pin macros in `drivers/board_pins.h`
-3. Re-check SPI / CS wiring against the schematic
 
 ## License
 
