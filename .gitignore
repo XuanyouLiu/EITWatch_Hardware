@@ -1,0 +1,21 @@
+.DS_Store
+Thumbs.db
+
+# Altium / CAD local junk
+**/History/
+**/__Previews/
+*.PrjPcbStructure
+*.SchDocPreview
+*.PcbDocPreview
+*.PcbLibPreview
+*.zip
+
+# ESP-IDF / firmware build outputs
+firmware/build/
+firmware/managed_components/
+firmware/.cache/
+firmware/sdkconfig.old
+firmware/dependencies.lock
+
+# Nested repos (firmware should live in this tree)
+firmware/.git/

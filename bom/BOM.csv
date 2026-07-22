@@ -1,0 +1,25 @@
+Name,Description,Designator,Part Number,Price,Qty
+0.1u,Capacitor,"C1, C5, C6, C7, C9, C13, C14, C15, C16, C18, C19, C22, C23, C24, C25, C27, C30, C31, C32, C33, C35",,,21
+1uF,Capacitor,"C2, C8, C10, C17",,,4
+10n,Capacitor,"C3, C4",,,2
+2.2uF,Capacitor,"C11, C12",,,2
+0.47n,Capacitor,"C20, C21",,,2
+2.7n,Capacitor,C28,,,1
+10uF,CAP CER 10UF 4V X5R 0402,"C29, C34",KYOCERA AVX 04024D106MAT2A,0.54,2
+ADG738BRUZ,Integrated Circuit,"MUX1, MUX2, MUX3, MUX4",,,4
+ECS-2520MV-500-BL-TR,Crystal or Oscillator,OS1,,,1
+Header 1x7,,"P2, P3",,,2
+20k,Resistor,R1,,,1
+1K,Resistor,"R2, R3, R16, R17",,,4
+47k,Resistor,"R4, R5, R7, R8, R12, R13, R14, R15, R22, R23, R24, R25, R29",,,13
+220,Resistor,"R6, R9",,,2
+0,Resistor,R18,,,1
+10k,Resistor,"R19, R20, R21, R26, R31",,,5
+4.7k,Resistor,R27,,,1
+0,Resistor,R30,,,1
+TLV73325PDBVT,Integrated Circuit,U1,,,1
+AD5930YRUZ,Integrated Circuit,U2,,,1
+AD8220ARMZ,Integrated Circuit,"U3, U7",,,2
+AD5270BRMZ-100,Integrated Circuit,"U4, U6",,,2
+ADA4841-2YRMZ,Integrated Circuit,U5,,,1
+AD7450BRZ,"Single 12-Bit Analog-to-Digital Converter with Serial Interface, 1MSPS, -40 to +85 degC, R-8, Pb-Free, Tube",U8,Analog Devices AD7450BRZ,18.17,1

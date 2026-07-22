@@ -1,0 +1,18 @@
+EITWatch open hardware release
+Copyright 2026 Xuanyou Liu, Novel Alam, and Karan Ahuja
+
+This repository uses two licenses:
+
+1. Hardware design files
+   (altium/, bom/, docs/, fabrication/)
+   CERN Open Hardware Licence Version 2 - Permissive (CERN-OHL-P-2.0)
+   See LICENSE.CERN-OHL-P-2.0
+
+2. Firmware
+   (firmware/)
+   Apache License, Version 2.0
+   See firmware/LICENSE
+
+SPDX summary:
+  Hardware: CERN-OHL-P-2.0
+  Firmware: Apache-2.0
