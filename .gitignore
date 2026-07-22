@@ -19,3 +19,7 @@ firmware/dependencies.lock
 
 # Nested repos (firmware should live in this tree)
 firmware/.git/
+
+# Local staging drops
+updated/
+.DS_Store

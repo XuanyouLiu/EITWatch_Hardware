@@ -189,6 +189,22 @@ Used DCodes :
 *************************************************************
 
 *************************************************************
+Generating : Layer4
+      File : main.G3
+
+    Adding Layer      : Layer4
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D41
+    D43
+    D44
+    D45
+*************************************************************
+
+*************************************************************
 Generating : Layer 1
       File : main.GTL
 
@@ -239,22 +255,6 @@ Generating : Layer3
       File : main.G2
 
     Adding Layer      : Layer3
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-    D41
-    D43
-    D44
-    D45
-*************************************************************
-
-*************************************************************
-Generating : Layer4
-      File : main.G3
-
-    Adding Layer      : Layer4
 
     Adding Layer      : Multi-Layer
 

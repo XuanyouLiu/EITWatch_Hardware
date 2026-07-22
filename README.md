@@ -24,7 +24,7 @@ hw/
 
 | Path | Contents |
 |------|----------|
-| [`altium/`](altium/) | Editable schematic, PCB, and libraries (`BioWatch.PrjPcb` is the Altium project name; product name is EITWatch) |
+| [`altium/`](altium/) | Editable schematic, PCB, and libraries (`EITWatch.PrjPcb`) |
 | [`docs/overview.png`](docs/overview.png) | Prototype overview figure |
 | [`docs/schematic.pdf`](docs/schematic.pdf) | Printable schematic |
 | [`docs/eitwatch.step`](docs/eitwatch.step) | 3D board model |
@@ -95,7 +95,7 @@ Full line items are in [`bom/BOM.csv`](bom/BOM.csv). The BOM does **not** includ
 
 ### Editing the design
 
-Open [`altium/BioWatch.PrjPcb`](altium/BioWatch.PrjPcb) in Altium Designer. Main sources:
+Open [`altium/EITWatch.PrjPcb`](altium/EITWatch.PrjPcb) in Altium Designer. Main sources:
 
 - `main.SchDoc` – primary schematic
 - `AC_sch.SchDoc` – analog / related sheet
