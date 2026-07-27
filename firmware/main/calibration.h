@@ -43,4 +43,3 @@ extern const uint16_t SCR_RDATA_CONST;
 extern const uint16_t SNS_RDATA_CONST;
 
 extern Calibration_t pair_calibration_map[NUM_ELECTRODE_PAIRS][NUM_SENSE_PAIRS];
-extern TaskHandle_t meas_task;

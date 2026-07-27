@@ -29,8 +29,6 @@ Pin macros live in [`drivers/board_pins.h`](drivers/board_pins.h) (XIAO ESP32-S3
 - [ESP-IDF](https://docs.espressif.com/projects/esp-idf/) **v5.2+**
 - USB data cable to the XIAO
 
-On first build, the IDF component manager fetches `espressif/esp-dsp` into `managed_components/` (gitignored).
-
 ## Build, flash, monitor
 
 ```bash
