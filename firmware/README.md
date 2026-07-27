@@ -50,6 +50,15 @@ Detach the monitor with `Ctrl+]`.
 
 After flash, `app_main` initializes SPI, ADC, muxes, digipots, and the 50 kHz source, then starts the FreeRTOS measurement task. Frames are printed / streamed over USB Serial JTAG.
 
+## Relation to the paper
+
+This release is the minimal reference implementation of the EITWatch acquisition firmware: it runs the same 35-channel multi-depth schedule as the paper, but outputs frames over USB Serial JTAG only. Two variants described in the paper are not included, to keep the release simple:
+
+- **Wi-Fi streaming** — the user study streamed frames to a host computer over Wi-Fi. This is a straightforward extension: replace the `printf` sink at the end of `measurement_task` (`main/measurement.c`) with a socket sender using the standard ESP-IDF Wi-Fi / lwIP stack.
+- **On-device dual-core inference** — the latency and power figures were measured with an online pipeline that pins acquisition on one core and preprocessing + ExtraTrees inference on the other. This likewise builds directly on this codebase by adding a second FreeRTOS task pinned to the other core that consumes the per-frame amplitudes.
+
+Neither variant changes the drivers, the analog front-end control, or the measurement schedule released here.
+
 ### Quick bring-up checklist
 
 1. Seat the XIAO with the USB port oriented as on the silkscreen.
