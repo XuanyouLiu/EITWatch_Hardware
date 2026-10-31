@@ -148,12 +148,7 @@ If you use this hardware or firmware, please cite the UIST 2026 EITWatch paper (
 
 Copyright 2026 Xuanyou Liu, Novel Alam, and Karan Ahuja.
 
-| Material | License | File |
-|----------|---------|------|
-| Hardware (`altium/`, `bom/`, `docs/`, `fabrication/`) | [CERN-OHL-P-2.0](https://ohwr.org/cern_ohl_p_v2.txt) | [`LICENSE.CERN-OHL-P-2.0`](LICENSE.CERN-OHL-P-2.0) |
-| Firmware (`firmware/`) | [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0) | [`firmware/LICENSE`](firmware/LICENSE) |
-
-See [`LICENSE`](LICENSE) for the dual-license summary.
+Hardware, documentation, and firmware in this repository are licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/) (CC BY-NC-SA 4.0). See [`LICENSE`](LICENSE).
 
 ## Acknowledgments
 

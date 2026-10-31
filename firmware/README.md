@@ -68,4 +68,4 @@ Neither variant changes the drivers, the analog front-end control, or the measur
 
 ## License
 
-Firmware is licensed under the [Apache License 2.0](LICENSE). Hardware design files in the parent directory use CERN-OHL-P-2.0; see [`../LICENSE`](../LICENSE).
+This firmware is part of the EITWatch repository and is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/) (CC BY-NC-SA 4.0). See [`../LICENSE`](../LICENSE).
